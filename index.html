@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--HEADER-->
+    <header class="header">
+
+        <!--CATEGORIES DROPDOWN-->
+        <div class="categories-dropdown" id="catDropdown">
+            <button class="categories-button" id="catBtn">&#9776; Categories &#9660;</button>
+            <ul class="categories-menu">
+                <li data-category="all">All</li>
+                <li data-category="shoes">Shoes</li>
+                <li data-category="dresses">Dresses</li>
+                <li data-category="belts">Belts</li>
+                <li data-category="shirts">Shirts</li>
+                <li data-category="trousers">Trousers</li>
+            </ul>
+        </div>
+
+        <!--LOGO-->
+        <div class="logo-text">
+            <h2>V<span class="logo-highlight">stores</span></h2>
+        </div>
+
+        <!--CART-->
+        <div class="cart-wrapper" id="cartWrapper">
+            <button class="cart-trigger" id="cartBtn">
+                &#128722; Cart (<span id="cart-count">0</span>)
+            </button>
+            <div class="cart-panel" id="cart">
+                <h4>My Cart</h4>
+                <p>Items: <span id="cart-count-panel">0</span></p>
+                <p>Total: &#8358;<span id="cart-total">0.00</span></p>
+                <ul id="cart-items"></ul>
+                <button id="clear-cart">Clear Cart</button>
+            </div>
+        </div>
+
+    </header>
+
+    <!--SEARCH-->
+    <section class="search-filter">
+        <input type="text" id="search-input" placeholder="Search products...">
+    </section>
+
+    <!--PRODUCTS-->
+    <section class="products" id="products-grid">
+
+        <div class="product-card" data-category="shoes" data-name="Nike AIR" data-price="20000">
+            <img src="images/nike-air.png" alt="nike air">
+            <h3>Nike AIR</h3>
+            <p class="price">&#8358;20,000</p>
+            <button class="add-to-cart" data-name="Nike AIR" data-price="20000">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-category="shoes" data-name="Adidas Runner" data-price="17500">
+            <img src="images/adidas-runner.png" alt="adidas runner">
+            <h3>Adidas Runner</h3>
+            <p class="price">&#8358;17,500</p>
+            <button class="add-to-cart" data-name="Adidas Runner" data-price="17500">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-category="dresses" data-name="Summer Dress" data-price="10000">
+            <img src="images/summer-dress.png" alt="summer dress">
+            <h3>Summer Dress</h3>
+            <p class="price">&#8358;10,000</p>
+            <button class="add-to-cart" data-name="Summer Dress" data-price="10000">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-category="dresses" data-name="Evening Gown" data-price="15000">
+            <img src="images/evening-gown.png" alt="evening gown">
+            <h3>Evening Gown</h3>
+            <p class="price">&#8358;15,000</p>
+            <button class="add-to-cart" data-name="Evening Gown" data-price="15000">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-category="belts" data-name="Leather Belt" data-price="5000">
+            <img src="images/leather-belt.png" alt="leather belt">
+            <h3>Leather Belt</h3>
+            <p class="price">&#8358;5,000</p>
+            <button class="add-to-cart" data-name="Leather Belt" data-price="5000">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-category="belts" data-name="Fashion Belt" data-price="8000">
+            <img src="images/fashion-belt.png" alt="fashion belt">
+            <h3>Fashion Belt</h3>
+            <p class="price">&#8358;8,000</p>
+            <button class="add-to-cart" data-name="Fashion Belt" data-price="8000">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-category="shirts" data-name="Casual Shirt" data-price="7500">
+            <img src="images/casual-shirt.png" alt="casual shirt">
+            <h3>Casual Shirt</h3>
+            <p class="price">&#8358;7,500</p>
+            <button class="add-to-cart" data-name="Casual Shirt" data-price="7500">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-category="shirts" data-name="Polo Shirt" data-price="9000">
+            <img src="images/polo-shirt.png" alt="polo shirt">
+            <h3>Polo Shirt</h3>
+            <p class="price">&#8358;9,000</p>
+            <button class="add-to-cart" data-name="Polo Shirt" data-price="9000">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-category="trousers" data-name="Chinos" data-price="10000">
+            <img src="images/chinos.png" alt="chinos">
+            <h3>Chinos</h3>
+            <p class="price">&#8358;10,000</p>
+            <button class="add-to-cart" data-name="Chinos" data-price="10000">Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-category="trousers" data-name="Jeans" data-price="15000">
+            <img src="images/jeans.png" alt="jeans">
+            <h3>Jeans</h3>
+            <p class="price">&#8358;15,000</p>
+            <button class="add-to-cart" data-name="Jeans" data-price="15000">Add to Cart</button>
+        </div>
+
+        <p id="no-results" style="display:none;">No products found.</p>
+
+    </section>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&#169; 2026 <strong>V</strong><span class="logo-highlight">Stores</span>. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank">Instagram</a> |
+                <a href="#" target="_blank">Twitter</a> |
+                <a href="#" target="_blank">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
