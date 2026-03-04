@@ -27,7 +27,7 @@ img {
 
 /*
     COLOR PALETTE
-    --white:      #FFFFFF  page background
+    --Floral white:      #FDF6EC  page background
     --light-gray: #F5F5F5  card background
     --dark:       #1E1E1E  header, footer, text
     --accent:     #C8973A  buttons, highlights (warm gold)
@@ -37,7 +37,7 @@ img {
 */
 
 body {
-    background-color: #FFFFFF;
+    background-color: #FDF6EC;
     color: #1E1E1E;
 }
 
@@ -380,3 +380,4 @@ body {
         right: -14px;
     }
 }
+
