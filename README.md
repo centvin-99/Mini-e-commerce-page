@@ -6,7 +6,7 @@ A responsive mini e-commerce page listing 10 products across 5 categories. Users
 
 ## Live Demo
 
-[View Live Site](https://centvin-99.github.io/mini-ecommerce-page)
+[View Live Site](https://centvin-99.github.io/Mini-e-commerce-page/)
 
 ---
 
@@ -71,3 +71,4 @@ This project pushed my JavaScript skills the furthest. Managing the cart as an a
 ## Author
 
 **Vincent** - [@Centvin-99](https://github.com/Centvin-99)
+
